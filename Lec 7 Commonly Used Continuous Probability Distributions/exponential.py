@@ -1,3 +1,26 @@
+"""
+Background
+Use the exponential distribution when you want to measure
+the time between events in a Poisson process.
+
+poisson dist: how many times in an interval (discrete)
+- poisson uses lambda, the average number of events per interval
+- examples: # of customer support calls received in 1 hr. # of typos on a page of a book
+
+exponential dist: how much time passes before next event (continuous)
+- lambda = rate parameter = average rate of events
+- 1 / lambda = mean time between events
+ - examples: how long a customer waits in line b4 being serve. how many hours a phone battery lasts before dying
+ - time until a lightbulb burns out
+
+ how do they tie together?
+ Both describe a Poisson process:
+ 1. evts happen INDEPENDENTLY at a constant average rate lambda
+ 2. the count of evts in a time windows follows a poissions distribution
+ 3. the time you wait until the very first evet occurs follow an exponential distribution
+ ** the lambdas are the same for both distributions **
+"""
+
 from scipy.stats import expon
 
 scale_param = 2.0  # 1 / lambda
