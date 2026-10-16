@@ -54,6 +54,10 @@ From the project root, run any script directly with Python. For example:
 python "Lec 4 - Commonly Used Discrete Probability Distributions/binomial_distribution.py"
 ```
 
+## GitHub Actions
+
+The Python Syntax Check workflow runs on every push and pull request. It uses Python 3.12 and `compileall` to check the repository's Python files for syntax errors.
+
 ## Learning goals
 
 This repository is intended to help with understanding:
