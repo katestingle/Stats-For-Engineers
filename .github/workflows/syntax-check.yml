@@ -1,0 +1,22 @@
+name: Python Syntax Check
+
+on: [push, pull_request]
+
+jobs:
+  check-syntax:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Clones repo onto GitHub machine
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. Sets up a clean Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    # 3. Runs Python's built-in compile feature to flag syntax errors
+    - name: Check Syntax Error
+      run: python -m compileall -q .
